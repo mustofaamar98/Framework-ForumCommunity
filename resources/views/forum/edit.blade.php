@@ -86,8 +86,7 @@
 @endsection @section('js')
 <script>
     $(document).ready(function() {
-        $('.tags').select2().val({!!json_encode($forum - > tags() - > allRelatedIds()) !!
-        }).trigger('change');
+        $('.tags').select2().val({!!json_encode($forum->tags()->allRelatedIds())!!}).trigger('change');
     });
 
     CKEDITOR.replace('description', {
