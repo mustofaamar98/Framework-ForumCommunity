@@ -33,11 +33,11 @@
             <div class="container" id="nav_ul">
                 @guest
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Forum-Community') }}
                 </a>
                 @else
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Forum-Community') }}
                 </a>
                 @endguest
                 
@@ -61,10 +61,6 @@
                     <li><a class="nav-link" id="b" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                   @else
                      <span class="input-group-btn" style="padding: 5px; margin-right: 11px;">
-                    {{-- <button class="btn btn-tc" type="button" ><i class="fa fa-star"></i> </button>
-                    <button class="btn btn-tc" type="button" ><i class="fa fa-inbox"></i> </button>
-                    <button class="btn btn-tc" type="button" ><i class="fa fa-info"></i> </button>
-                    <button class="btn btn-tc" type="button" ><i class="fa fa-question"></i></button> --}}
                   </span>
                         <li class="nav-item dropdown">
                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>  Menu <span class="caret"></span>

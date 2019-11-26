@@ -13,6 +13,62 @@
             <br>
           </div>
         </div>
+        
+{{-- 
+        @foreach ($user as $users) --}}
+        <div class="row text-center admin">
+          <div class="col-lg-12">
+            <button type="button" class="btn btn-update button-showdataprofil"
+            data-toggle="modal" data-target="#modalupdateprofil" data-id=''>Edit Profil</button>
+          </div>
+        </div>
+        <!-- Modal UPDATE -->
+    <div class="modal fade" id="modalupdateprofil" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle" style="color: black;">Edit Profil</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form method="POST" action="" enctype="multipart/form-data" class="form-updatedataprofil">
+          <div class="modal-body">
+            {{ csrf_field() }}
+            {{ method_field('PUT') }}
+            <div class="form-group">
+              <label for="" style="color: black;">Nama</label>
+              <input type="text" class="form-control data-name" id="name" aria-describedby=""
+                placeholder="{{$user->name}}" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="" style="color: black;">Email</label>
+              <input type="email" class="form-control data-email" id="email" aria-describedby=""
+                placeholder="{{$user->email}}" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="" style="color: black;">Password</label>
+              <input type="password" class="form-control data-email" id="email" aria-describedby=""
+                placeholder="{{$user->password}}" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1" style="color: black;">File Foto</label>
+              <input type="file" class="form-control-file data-filefoto" id="exampleFormControlFile1" name="fotoprofil">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+            <button type="sumbit" class="btn btn-primary">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+    
+           {{-- end modal --}}
+        {{-- @endforeach --}}
+
     </div>
   </div>
 </div>  

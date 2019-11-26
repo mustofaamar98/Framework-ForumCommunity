@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Forum;
 use Auth;
 Use App\Tag;
+use DB;
 Use Storage;
 
 class HomeController extends Controller
@@ -27,9 +28,17 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // $tags = DB::table('tags')
+        // ->select('name')
+        // ->groupBy('name')
+        // ->get();
+
+        $tags = Tag::select('name')
+                    ->groupBy('name')
+                    ->get();
         $forums = Forum::all();
         $forumview = Forum::orderBy('view', 'DESC')->get();
-        return view ('home', compact('forums','forumview'));
+        return view ('home', compact('forums','forumview','tags'));
     }
 
 }

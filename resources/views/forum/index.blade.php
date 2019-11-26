@@ -5,6 +5,7 @@
             <div class="text-center">
                 <h1 style="font-family: 'Lobster', cursive;, font-size:40px;">Forum Community</h1>
                 <p>Forum tanya jawab, Membantu Solusi Pencarian Masalah Anda</p>
+                
             </div>
         </div>
     </div>
@@ -16,7 +17,7 @@
                 <div class="card-body" id="tc_panelbody">
                     <div class="row">
                         <div class="col-md-8" style="padding-right:0;"><br>
-
+                            
                             <div class="table100 ver2 m-b-110">
                                 <div class="table100-head">
                                     <table>

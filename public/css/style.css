@@ -6,6 +6,14 @@ body {
     /*line-height: 1.3;*/
 }
 
+.btn-update {
+    margin-right: 10px;
+    background: white;
+    border-radius: 30px;
+    padding: 5px 15px;
+    border: none;
+}
+
 .navbar {
     background-image: linear-gradient(45deg, #D959FB, #C575FA, #A29AF7);
     padding: 15px 0;
@@ -102,8 +110,8 @@ body {
 .home .nav li a {
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
-    background-image: linear-gradient(45deg, #D959FB, #C575FA, #A29AF7)!important;
-    color: white;
+    background: rgb(169, 185, 206) !important;
+    color: rgb(255, 255, 255);
     padding: 8px 15px;
     border-radius: 30px;
     margin-right: 10px;
@@ -131,6 +139,14 @@ body {
 }
 
 #pills-popular h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+#pills-profile h3 {
     font-family: 'Nunito', sans-serif;
     font-size: 30px;
     font-weight: bold;
@@ -359,7 +375,9 @@ td {
 }
 
 #tc_jumbotron_footer {
-    background-image: url('/images/footer.png');
+    margin-top: 70px;
+    background-image: url('/images/bgf.png') !important;
+    background-image: linear-gradient(45deg, #D959FB, #C575FA, #A29AF7);
     background-size: cover;
     box-shadow: 0 5px 10px #C575FA;
     border-top-right-radius: 0;
@@ -551,7 +569,7 @@ td {
 }
 
 #tc_jumbotron_profile {
-    background-image: url('/images/footer.png');
+    background-image: linear-gradient(45deg, #D959FB, #C575FA, #A29AF7);
     background-size: auto;
     box-shadow: 0 5px 10px #888888;
     border-bottom-right-radius: 0;
@@ -791,7 +809,9 @@ input::-webkit-input-placeholder {
 }
 
 .forum_title .tag_label {
+    background: rgb(85, 50, 102);
     color: #fff;
+    padding: 9px 15px;
 }
 
 .tag_label {
