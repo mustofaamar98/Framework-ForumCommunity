@@ -5,8 +5,12 @@
     <div class="jumbotron" id="tc_jumbotron_profile">
       <div class="card-body">
         <div class="text-center">
-         <div class="profile_img"> 
+         <div class="profile_img">
+           @if($user->fotoprofil==null)
            <img src="{{asset('images/user.jpg')}}" style="background: #fff;">
+           @else 
+           <img src="{{asset('images/'.$user->fotoprofil)}}" style="background: #fff;">
+           @endif
          </div>
           <div id="user_name">
             <h3>{{$user->name}}</h3> 
@@ -49,8 +53,8 @@
             </div>
             <div class="form-group">
               <label for="" style="color: black;">Password</label>
-              <input type="password" class="form-control data-email" id="email" aria-describedby=""
-                placeholder="{{$user->password}}" name="email" required>
+              <input type="password" class="form-control data-email" id="password" aria-describedby=""
+                placeholder="{{$user->password}}" name="password" required>
             </div>
             <div class="form-group">
               <label for="exampleFormControlFile1" style="color: black;">File Foto</label>

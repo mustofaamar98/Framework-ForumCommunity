@@ -81,7 +81,11 @@
                                 <div class="card-body" style="background: #f9f9f9; ">
                                     <div class="row">
                                         <div class="col-md-2" id="img_comment">
-                                            <img src="{{asset('images/user.jpg')}}" width="100%">
+                                            @if($comment->user->fotoprofil==null)
+                                            <img src="{{asset('images/user.jpg')}}" style="background: #fff;" width="100%">
+                                            @else
+                                            <img src="{{asset('images/'.$comment->user->fotoprofil)}}" width="100%">
+                                            @endif
                                             <br>
                                             <div class="comment_user">
                                                 <b>{{$comment->user->name}}</b>
@@ -121,7 +125,11 @@
                                                         {{$reply->content}}
                                                     </div>
                                                     <div class="col-md-2 ml-auto" id="img_comment_reply">
-                                                        <img class="img-reply" src="{{asset('images/user.jpg')}}" width="100%">
+                                                        @if($reply->user->fotoprofil==null)
+                                                        <img src="{{asset('images/user.jpg')}}" style="background: #fff;" width="100%">
+                                                        @else
+                                                        <img class="img-reply" src="{{asset('images/'.$reply->user->fotoprofil)}}" width="100%">
+                                                        @endif
                                                         <br>
                                                         <div class="comment_user">
                                                             <b>{{$reply->user->name}}</b>

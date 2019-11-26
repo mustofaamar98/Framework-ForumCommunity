@@ -30,6 +30,7 @@ Route::post('/comment/addComment/{forum}','CommentController@addComment')->name(
 Route::post('/comment/replyComment/{comment}','CommentController@replyComment')->name('replyComment');
 
 Route::get('/user/{user}','ProfileController@index')->name('profile');
+Route::put('/user/{user}', 'ProfileController@update')->name('profile.update');
 
 Route::resource('/tag','TagController');
   
