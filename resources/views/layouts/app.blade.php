@@ -29,14 +29,14 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style=" background-color: #2ab27b;">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container" id="nav_ul">
                 @guest
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" style="font-weight: bold, font-size:30px;">
                     {{ config('app.name', 'Forum-Community') }}
                 </a>
                 @else
-                <a class="navbar-brand" href="{{ url('/home') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}" style="font-weight: bold, font-size:30px;">
                     {{ config('app.name', 'Forum-Community') }}
                 </a>
                 @endguest

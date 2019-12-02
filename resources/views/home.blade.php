@@ -39,7 +39,8 @@
                                 <h5 class="card-title">{{$view->title}}</h5>
                                 @foreach ($view->tags as $tag)
                                 <a href="#" class="badge badge-success tag_label">{{$tag->name}}</a> @endforeach @if(empty($view->image)) @else
-                                <div class="badge badge-success tag_label_image"><i class="fa fa-image"></i></div>
+                            <div class="badge badge-success tag_label_image"><img src="{{asset('/images/image.png')}}" alt="" style="max-width: 20px;
+                                height: auto;"></div>
                                 @endif
                                 <p class="card-text">{!! Illuminate\Support\Str::limit($view->description, $limit = 120, $end = '...') !!}</p>
                                 <a href="{{route('forumslug', $view->id)}}" class="btn btn-gradient">View Forum</a>
@@ -61,7 +62,8 @@
                                 <h5 class="card-title">{{$forum->title}}</h5>
                                 <a href="#" class="badge badge-success tag_label">{{$tag->name}}</a>
                                 @if(empty($forum->image)) @else
-                                <div class="badge badge-success tag_label_image"><i class="fa fa-image"></i></div>
+                                <div class="badge badge-success tag_label_image"><img src="{{asset('/images/image.png')}}" alt="" style="max-width: 20px;
+                                    height: auto;"></i></div>
                                 @endif
                                 <p class="card-text">{!! Illuminate\Support\Str::limit($forum->description, $limit = 120, $end = '...') !!}</p>
                                 <a href="{{route('forumslug', $forum->id)}}" class="btn btn-gradient">View Forum</a>

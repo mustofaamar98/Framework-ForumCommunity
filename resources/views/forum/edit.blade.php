@@ -37,7 +37,8 @@
                        </select>
                             </div>
 
-                            <a data-toggle="collapse" data-target="#screenshot-open"><i class="fa fa-image" id="upload_image"></i></a>
+                            <a data-toggle="collapse" data-target="#screenshot-open"><img id="upload_image" src="{{asset('/images/imageadd.png')}}" alt="" style="max-width: 45px;
+                                height: auto;"></a>
                             <div id="screenshot-open" class="collapse">
                                 <div class="bg">
                                     <div class="form-group">

@@ -30,7 +30,8 @@
                                         <small>{{$forums->comments->count()}} Comments</small> | @foreach($forums->tags as $tag)
                                         <div class="badge badge-success">#{{$tag->name}}</div>
                                         @endforeach @if (empty($forums->image)) @else
-                                        <div class="badge badge-success"><i class="fa fa-image image-icon"></i></div>
+                                        <div class="badge badge-success"><img src="{{asset('/images/image.png')}}" alt="" style="max-width: 12px;
+                                            height: auto;"></i></div>
                                         @endif
                                         <h3>{{$forums->title}}</h3>
                                     </div>
@@ -39,8 +40,7 @@
                                         @if (empty($forums->image)) @else
                                         <br>
                                         <div class="tc_if_empty">
-                                            <a data-toggle="collapse" data-target="#open_modal"><i class="fa fa-image" id="zoom_image">  View Image</i></a>
-                                            <div id="open_modal" class="collapse">
+                                            <div >
                                                 <div class="bg">
                                                     <img src="{{asset('images/'.$forums->image)}}" alt="">
                                                     <div class="overlay">

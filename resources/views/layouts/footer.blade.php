@@ -1,5 +1,5 @@
 <div class="container"> 
-    <div class="jumbotron" id="tc_jumbotron_footer">
+    <div class="jumbotron" id="tc_jumbotron_footer" >
           <div class="card-body">  
           <div class="row">
           <div class="col-md-6"><br>

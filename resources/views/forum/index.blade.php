@@ -46,7 +46,8 @@
                                                         @endforeach 
                                                         @if(empty($forum->image)) 
                                                         @else
-                                                        <div class="badge badge-success tag_label_image"><i class="fa fa-image"></i></div>
+                                                        <div class="badge badge-success tag_label_image"><img src="{{asset('/images/image.png')}}" alt="" style="max-width: 12px;
+                                                            height: auto;"></i></div>
                                                         @endif
                                                     </div>
                                                 </td>
